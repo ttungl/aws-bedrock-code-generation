@@ -6,3 +6,7 @@
 ### Architecture:
 - Request/Query -> Lambda -> BedRock -> Store S3 -> Response.
 - APIgateway to Lambda 
+
+
+# Testing
+- Postman
