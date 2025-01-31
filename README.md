@@ -28,8 +28,7 @@
 
 
 ## Output sample
-- ![response.py](./code-output/2025-01-31_19-16-34.py)
-- ![response.rs](./code-output/2025-01-31_19-20-35.rs)
+- In `code-output/2025-01-31_19-16-34.py` and `code-output/2025-01-31_19-20-35.rs`.
 
 
 ## Credits:
