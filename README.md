@@ -1,1 +1,1 @@
-# aws-bedrock-first-e2e
+# aws-bedrock-code-generation
