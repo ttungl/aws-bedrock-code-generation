@@ -17,7 +17,21 @@
 
 ## Code:
 - `lambda_function.py`
-- After coding, then deploying it and testing it using Postman.
+- After coding, then `deploying` it and testing it using Postman.
+
+## API Gateway
+- Go to the API Gateway service, create API, e.g. `code-gen`. 
+![api1](./images/API1.png)
+
+- Create a route detail with `POST` /`bedrock_code_generation`
+
+- Add the stages, e.g., `dev` and/or `prod`, and disable the auto deploy.
+
+- Deploy it.
+
+![api2](./images/API2.png)
+
+
 
 ## Testing
 1. Using Postman. 
