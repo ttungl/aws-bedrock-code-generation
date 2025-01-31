@@ -35,6 +35,12 @@
 
 ## Testing
 1. Using Postman. 
+- In API Gateway, get the stage link (`dev`) and paste to the HTTP POST field. 
+`https://xyz123.execute-api.us-west-2.amazonaws.com/dev`
+- Click the API link on the side bar (in green box).
+![sideapi](./images/sideAPI.png) 
+
+
 ![postman](./images/POSTMAN.png)
 
 2. Check CloudWatch
