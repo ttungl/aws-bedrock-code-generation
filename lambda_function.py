@@ -19,12 +19,13 @@ def generate_code(message: str, language: str)-> str:
 
     try:
         bedrock = boto3.client('bedrock-runtime', 
+                                # region='us-west-2', 
                                 config=botocore.config.Config(read_timeout=300, 
                                                                 retries={'max_attempts': 3}))
         
         response = bedrock.invoke_model(
             body=body,
-            modelId="anthropic.claude-v2" # get access to the model if first time.
+            modelId="anthropic.claude-v2"
         )
 
         response_body = json.loads(response.get('body').read().decode('utf-8'))
@@ -60,7 +61,7 @@ def lambda_handler(event, context):
                 s3_key = f"code-output/{current_time}.py"
             elif language=="rust":
                 s3_key = f"code-output/{current_time}.rs"
-                
+
             s3_bucket = "bedrock-bucket-tungyt"
 
             save_code_to_s3_bucket(generated_code, s3_bucket, s3_key)
@@ -70,7 +71,7 @@ def lambda_handler(event, context):
 
         return {
             'statusCode': 200,
-            'body': json.dumps('Code generated and saved to S3.')
+            'body': json.dumps(f'Code generated and saved to S3: {generated_code}')
         }
     except Exception as e:
         print(f"Error in lambda_handler: {e}")

@@ -1,10 +1,10 @@
 # aws-bedrock-code-generation
 
 ### Description:
-- In this project, we will create a code generation app using AWS BedRock. 
+- In this project, we will create a code generation api using AWS BedRock, Lambda, API Gateway, Cloudwatch, S3, and finally POSTMAN for testing. 
  
 ### Architecture:
-- Request/Query -> Lambda -> BedRock -> Store S3 -> Response.
+- Request/Query -> Lambda -> BedRock foundation model -> Store S3 -> Response.
 - APIgateway to Lambda 
 
 ### Setup:
